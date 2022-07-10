@@ -9,11 +9,12 @@ services:
     links:
       - db
     volumes:
-      - "./:/var/www/html"
+      - "./qa-laravel-ec-training:/var/www/html"
       - "./apache-php/apache.conf:/etc/httpd/conf/httpd.conf"
     container_name: "apache-php"
+    platform: linux/x86_64
   db:
-    image: mysql:5.7
+    image: mariadb:10.3
     environment:
       - MYSQL_ROOT_PASSWORD=root
     container_name: "mysql5.7"

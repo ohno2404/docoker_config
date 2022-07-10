@@ -8,7 +8,7 @@ RUN yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
 # apacheやphpをインストール
 RUN yum -y install httpd
-RUN yum -y install --enablerepo=remi,remi-php72 php php-mbstring php-mysqlnd php-pdo php-cli php-common php-devel php-fpm php-gd php-pear php-pecl php-apcu php-xml php-xmlrpc
+RUN yum -y install --enablerepo=remi,remi-php73 php php-mbstring php-mysqlnd php-pdo php-cli php-common php-devel php-fpm php-gd php-pear php-pecl php-apcu php-xml php-xmlrpc
 RUN yum -y install zip unzip
 
 # composerをインストール
